@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Layout */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.flipkart-logo {
+  width: 160px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.flipkart-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Desktop Search Bar (hidden by default) */
+.icon-and-search-desktop {
+  display: none;
+}
+
+/* Search icon styling */
+.search-icon {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  color: rgb(151, 148, 148);
+  cursor: pointer;
+  font-size: 24px;
+  border-right: 1px solid #ffffff;
+  background-color: #ffffff;
+  height: 20px;
+}
+
+/* Search input */
+.search-input {
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  font-size: 14px;
+  flex: 1;
+  color: #212121;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+/* Nav right side */
+.Login-Cart-Seller {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  gap: 50px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.nav-item span.material-symbols-outlined {
+  font-size: 24px;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-icon {
+  font-size: 28px;
+  color: #212121;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 1000;
+  font-weight: 600;
+}
+.dropdown-content a {
+  color: #2874f0;
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mobile Search Bar (section) */
+.searchbar {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Mobile search input styling */
+.icon-and-search-mobile {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  background-color: #fff;
+}
+
+/* Hide .hide-name on small screens */
+@media screen and (max-width: 768px) {
+  .hide-name {
+    display: none;
+  }
+}
+
+/* Show desktop search bar on larger screens */
+@media screen and (min-width: 501px) {
+  .icon-and-search-desktop {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 10px;
+    border: 1px solid white;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgb(204, 198, 198);
+    background-color: rgb(255, 255, 255);
+    flex-shrink: 1;
+  }
+
+  .searchbar {
+    display: none;
+  }
+}
+
+/* Show mobile search bar on small screens */
+@media screen and (max-width: 500px) {
+  .icon-and-search-desktop {
+    display: none;
+  }
+
+  .searchbar {
+    display: block;
+  }
+}
